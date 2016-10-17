@@ -1,16 +1,14 @@
-docker-mosquitto
+rpi-docker-mosquitto
 ================
 
-Docker image for mosquitto
+Docker image for mosquitto on Raspberry Pi
 
-[![Docker Stars](https://img.shields.io/docker/stars/toke/mosquitto.svg)](https://hub.docker.com/r/toke/mosquitto/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/toke/mosquitto.svg)](https://hub.docker.com/r/toke/mosquitto/)
-[![](https://images.microbadger.com/badges/image/toke/mosquitto.svg)](https://microbadger.com/images/toke/mosquitto "Get your own image badge on microbadger.com")
+This is a Raspberry Pi fork from https://github.com/toke/docker-mosquitto
 
 
 ## Run
 
-    docker run -ti -p 1883:1883 -p 9001:9001 toke/mosquitto
+    docker run -ti -p 1883:1883 -p 9001:9001 jonasheinisch/rpi-mosquitto
 
 Exposes Port 1883 (MQTT) 9001 (Websocket MQTT)
 
@@ -79,13 +77,14 @@ The example uses a docker volume named `mosquitto_data` (see above).
 
 ## Build
 
-    git clone https://github.com/toke/docker-mosquitto.git
+    git clone https://github.com/jonasheinisch/docker-mosquitto.git
+    git checkout rpi
     cd docker-mosquitto
     docker build .
 
 ## Authors and license
 
-docker-mosquitto was written by:
+docker-mosquitto was written originally by:
 
 * **Thomas Kerpe** | [web](https://toke.de/) | [mail](mailto:web@toke.de) | [GitHub](https://github.com/toke/)
 * With contributions from:
