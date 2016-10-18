@@ -78,8 +78,8 @@ The example uses a docker volume named `mosquitto_data` (see above).
 ## Build
 
     git clone https://github.com/jonasheinisch/docker-mosquitto.git
-    git checkout rpi
     cd docker-mosquitto
+    git checkout rpi
     docker build .
 
 ## Authors and license
