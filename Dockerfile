@@ -2,7 +2,9 @@ FROM resin/raspberrypi3-debian
 
 MAINTAINER J Hwang <code@johnvey.com>
 
-RUN wget http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key && \
+RUN apt-get update && \
+    apt-get install -y wget && \
+    wget http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key && \
     apt-key add mosquitto-repo.gpg.key && \
     wget -O /etc/apt/sources.list.d/mosquitto-stretch.list http://repo.mosquitto.org/debian/mosquitto-stretch.list && \
     apt-get update && \
