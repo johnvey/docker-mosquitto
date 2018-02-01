@@ -1,4 +1,5 @@
-FROM resin/raspberrypi3-debian
+FROM resin/raspberrypi3-debian:stretch
+ENV INITSYSTEM on
 
 MAINTAINER J Hwang <code@johnvey.com>
 
